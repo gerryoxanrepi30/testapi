@@ -1,0 +1,33 @@
+USE [TEST]
+GO
+
+/****** Object:  StoredProcedure [dbo].[InsertUser]    Script Date: 9/30/2022 6:33:02 PM ******/
+DROP PROCEDURE [dbo].[InsertUser]
+GO
+
+/****** Object:  StoredProcedure [dbo].[InsertUser]    Script Date: 9/30/2022 6:33:02 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+CREATE PROCEDURE [dbo].[InsertUser]
+	-- Add the parameters for the stored procedure here
+	@userid int,
+	@namalengkap nvarchar(50),
+	@username nvarchar(50),
+	@password nvarchar(50),
+	@status char(10)
+AS
+BEGIN
+	INSERT INTO tbl_user (namalengkap, [username], [password], [status]) VALUES (@namalengkap, @username, @password, @status)
+END
+GO
+
+

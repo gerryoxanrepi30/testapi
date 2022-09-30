@@ -1,0 +1,35 @@
+USE [TEST]
+GO
+
+/****** Object:  StoredProcedure [dbo].[GetUser]    Script Date: 9/30/2022 6:32:31 PM ******/
+DROP PROCEDURE [dbo].[GetUser]
+GO
+
+/****** Object:  StoredProcedure [dbo].[GetUser]    Script Date: 9/30/2022 6:32:31 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+CREATE PROCEDURE [dbo].[GetUser]
+@userid varchar(5)
+AS
+BEGIN
+	IF @userid = 'all'
+	BEGIN
+		SELECT * FROM tbl_user
+	END
+	ELSE
+	BEGIN
+		SELECT * FROM tbl_user where userid = @userid
+	END
+END
+GO
+
+

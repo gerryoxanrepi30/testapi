@@ -1,0 +1,29 @@
+USE [TEST]
+GO
+
+/****** Object:  StoredProcedure [dbo].[DeleteUser]    Script Date: 9/30/2022 6:31:18 PM ******/
+DROP PROCEDURE [dbo].[DeleteUser]
+GO
+
+/****** Object:  StoredProcedure [dbo].[DeleteUser]    Script Date: 9/30/2022 6:31:18 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+CREATE PROCEDURE [dbo].[DeleteUser] 
+	-- Add the parameters for the stored procedure here
+	@userid int
+AS
+BEGIN
+	DELETE FROM tbl_user WHERE [userid] = @userid
+END
+GO
+
+
